@@ -1,18 +1,18 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/book_social_db
-    username: username
-    password: password
+    username: fabricekouonang
+    password: admin123
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
         format_sql: true
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSLDialect
+   # database-platform: org.hibernate.dialect.PostgreSQLDialect
   mail:
     host: localhost
     port: 1025
@@ -34,3 +34,8 @@ application:
     jwt:
       secret-Key: 4343848488484884849929292929
       expiration: 8640000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activation-account
+server:
+  port: 8088

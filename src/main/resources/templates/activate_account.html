@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account activation</title>
+</head>
+<body>
+<div>
+    <h1>Account activation</h1>
+    <p th:text="'Hello '+ ${username}+ ','"></p>
+    <p>Thanks you for signing up. Plaese use the following activation code to activate your account</p>
+    <div>
+        <span th:text="${activation_code}"></span>
+    </div>
+    <div>
+        <a th:href="${confirmationUrl}">Activate your account</a>
+    </div>
+</div>
+</body>
+</html>

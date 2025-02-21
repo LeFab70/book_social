@@ -92,7 +92,7 @@ public class User implements UserDetails, Principal {
         return this.email;
     }
 
-    private String getFullName(){
+    public String getFullName(){
         return  this.firstName.concat(" ").concat(this.lastName);
     }
 

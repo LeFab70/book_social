@@ -1,5 +1,7 @@
 package org.fab.booknetwork;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.fab.booknetwork.role.Role;
 import org.fab.booknetwork.role.RoleRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -9,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+@OpenAPIDefinition(info = @Info(title = "Book Network API", version = "1.0", description = "API de gestion des livres"))
 
 @SpringBootApplication
 @EnableJpaAuditing
